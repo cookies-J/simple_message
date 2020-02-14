@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Apz-DM-7Rp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--交作业-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TYSMViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cCd-RT-yUx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="709"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yF7-Rl-aaL">
+                                <rect key="frame" x="0.0" y="753" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpK-gl-uvz">
+                                        <rect key="frame" x="335" y="7.5" width="63" height="45"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="NpK-gl-uvz" secondAttribute="height" multiplier="7:5" id="AcF-Rr-fBP"/>
+                                            <constraint firstAttribute="height" constant="45" id="nHA-My-qpt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="发送">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FeV-rf-Suk"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="1dN-3h-tzs" customClass="IQTextView">
+                                        <rect key="frame" x="16" y="7.5" width="309" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="请输入文字"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ia-Uz-Rrk">
+                                        <rect key="frame" x="0.0" y="-0.5" width="414" height="0.5"/>
+                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="5Tu-L2-P1K"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="9ia-Uz-Rrk" firstAttribute="top" secondItem="yF7-Rl-aaL" secondAttribute="top" constant="-0.5" id="1zv-f3-q0i"/>
+                                    <constraint firstItem="NpK-gl-uvz" firstAttribute="centerY" secondItem="yF7-Rl-aaL" secondAttribute="centerY" id="47Z-f1-BRE"/>
+                                    <constraint firstAttribute="trailing" secondItem="9ia-Uz-Rrk" secondAttribute="trailing" id="5L8-Mx-aJF"/>
+                                    <constraint firstItem="9ia-Uz-Rrk" firstAttribute="leading" secondItem="yF7-Rl-aaL" secondAttribute="leading" id="DaP-X1-xc4"/>
+                                    <constraint firstItem="1dN-3h-tzs" firstAttribute="leading" secondItem="yF7-Rl-aaL" secondAttribute="leading" constant="16" id="DzN-cl-2pa"/>
+                                    <constraint firstItem="NpK-gl-uvz" firstAttribute="bottom" secondItem="1dN-3h-tzs" secondAttribute="bottom" id="EPP-mu-oDA"/>
+                                    <constraint firstItem="NpK-gl-uvz" firstAttribute="top" secondItem="1dN-3h-tzs" secondAttribute="top" id="Inc-y6-ctR"/>
+                                    <constraint firstAttribute="trailing" secondItem="NpK-gl-uvz" secondAttribute="trailing" constant="16" id="PMn-uf-xZR"/>
+                                    <constraint firstItem="NpK-gl-uvz" firstAttribute="leading" secondItem="1dN-3h-tzs" secondAttribute="trailing" constant="10" id="Qy5-wK-AQw"/>
+                                    <constraint firstAttribute="height" constant="60" id="vrg-IV-znf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cCd-RT-yUx" firstAttribute="top" secondItem="aUh-0k-R7F" secondAttribute="top" id="IO3-Pg-Qpg"/>
+                            <constraint firstItem="yF7-Rl-aaL" firstAttribute="leading" secondItem="aUh-0k-R7F" secondAttribute="leading" id="KSn-Rl-1SP"/>
+                            <constraint firstItem="yF7-Rl-aaL" firstAttribute="top" secondItem="cCd-RT-yUx" secondAttribute="bottom" id="LQY-rg-1Wc"/>
+                            <constraint firstItem="aUh-0k-R7F" firstAttribute="bottom" secondItem="yF7-Rl-aaL" secondAttribute="bottom" id="Qsa-gv-ulp"/>
+                            <constraint firstItem="cCd-RT-yUx" firstAttribute="leading" secondItem="aUh-0k-R7F" secondAttribute="leading" id="kfl-tK-uEG"/>
+                            <constraint firstItem="aUh-0k-R7F" firstAttribute="trailing" secondItem="yF7-Rl-aaL" secondAttribute="trailing" id="sH5-YZ-GDP"/>
+                            <constraint firstItem="aUh-0k-R7F" firstAttribute="trailing" secondItem="cCd-RT-yUx" secondAttribute="trailing" id="xzf-X7-zGt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aUh-0k-R7F"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="交作业" image="doc.text" catalog="system" id="9B5-Ib-muz"/>
+                    <connections>
+                        <outlet property="inputTextView" destination="1dN-3h-tzs" id="cRg-gI-sG1"/>
+                        <outlet property="sendButton" destination="NpK-gl-uvz" id="vlY-RO-z2F"/>
+                        <outlet property="tableView" destination="cCd-RT-yUx" id="BMa-pU-jS7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--需求-->
+        <scene sceneID="DkI-ay-Civ">
+            <objects>
+                <viewController id="pPc-L7-O5n" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RH0-yl-BZb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qe5-Ci-kmc">
+                                <rect key="frame" x="16" y="44" width="382" height="769"/>
+                                <attributedString key="attributedText">
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="实现一个点对点的">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".PingFangHK-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="IM">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="聊天界面，具体要求如下：">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".PingFangHK-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+   1.</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="只需要实现一个聊天界面，不需要聊天列表。">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".PingFangHK-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+   2.</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="可以输入聊天内容（只需要支持文本聊天）。">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".PingFangHK-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+   3.</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="不需要接口，只需要发送消息时随机自动回复【我知道了、嗯、好的、谢谢】。">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".PingFangHK-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+   4.</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="杀掉应用再打开需要保留上次的聊天记录（数据持久化）。">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".PingFangSC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+   5.</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="不限应用架构（">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".PingFangHK-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="MVC">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="、">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".PingFangHK-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="MVVM">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="等）。">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".PingFangHK-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" paragraphSpacingBefore="21" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qe5-Ci-kmc" firstAttribute="leading" secondItem="XI8-Cd-yxK" secondAttribute="leading" constant="16" id="9yr-Fi-SSQ"/>
+                            <constraint firstItem="XI8-Cd-yxK" firstAttribute="trailing" secondItem="qe5-Ci-kmc" secondAttribute="trailing" constant="16" id="Kfx-0e-bXA"/>
+                            <constraint firstItem="XI8-Cd-yxK" firstAttribute="bottom" secondItem="qe5-Ci-kmc" secondAttribute="bottom" constant="8" symbolic="YES" id="okO-qY-t2p"/>
+                            <constraint firstItem="qe5-Ci-kmc" firstAttribute="top" secondItem="XI8-Cd-yxK" secondAttribute="top" constant="8" symbolic="YES" id="poe-3e-Vgv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XI8-Cd-yxK"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="需求" image="envelope.badge" catalog="system" id="6x9-mg-oZl"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFM-vN-smk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="977.67857142857133"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="86X-bf-dGm">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Apz-DM-7Rp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t5K-1p-s5Z">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="re3-Hp-TRc"/>
+                        <segue destination="pPc-L7-O5n" kind="relationship" relationship="viewControllers" id="fpt-id-mtJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tGG-ht-P9a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.text" catalog="system" width="56" height="64"/>
+        <image name="envelope.badge" catalog="system" width="64" height="48"/>
+    </resources>
+</document>
